@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vksa490l0-dotnet-basic-gitops
+  description: This is GitOps manifest for vksa490l0-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: vksa490l0-dotnet-basic
+    jenkins.io/job-full-name: vksa490l0-dotnet-basic-gitops
+    backstage.io/kubernetes-id: vksa490l0-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vksa490l0-dotnet-basic
